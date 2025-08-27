@@ -21,12 +21,12 @@
     interfaces.ens18 = {
       useDHCP = false;
       ipv4.addresses = [{
-        address = "10.42.37.100";
+        address = "192.168.1.101";
         prefixLength = 24;
       }];
     };
-    defaultGateway = "10.42.37.254";
-    nameservers = [ "10.42.37.254" ];
+    defaultGateway = "192.168.1.1";
+    nameservers = [ "192.168.1.1" ];
   };
 
   # System localization
@@ -44,7 +44,7 @@
     settings.PermitRootLogin = "yes";
   };
   services.qemuGuest.enable = true;
-  services.tailscale.enable = true;
+  services.tailscale.enable = false;
   # services.ollama = {
   #   enable = true;
   #   host = "0.0.0.0";
